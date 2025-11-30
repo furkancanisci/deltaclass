@@ -1,0 +1,319 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Additional Dashboard Styles */
+body {
+    background-color: #f5f7fb;
+    font-family: 'Instrument Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background-color: #f5f7fb;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #1e3c72, #2a5298);
+    box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.sidebar .sidebar-header {
+    background: rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar .sidebar-header h3 {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sidebar .sidebar-header strong {
+    display: none;
+}
+
+.list-unstyled.components {
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.list-unstyled.components li a {
+    color: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 5px 10px;
+    text-decoration: none;
+}
+
+.list-unstyled.components li a:hover,
+.list-unstyled.components li.active a {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.list-unstyled.components li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-user {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: auto;
+}
+
+.sidebar-user .dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-user .dropdown-toggle:hover {
+    color: #e9ecef;
+}
+
+.sidebar-user .user-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#content {
+    background-color: #f5f7fb;
+    min-height: 100vh;
+    flex: 1;
+    margin-left: 250px;
+    transition: all 0.3s;
+    padding-top: 20px;
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.nav-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link.dropdown-toggle img {
+    margin-right: 10px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+}
+
+.progress-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+.progress-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+.progress-title {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header h5 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.right-sidebar .sidebar-section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.right-sidebar .sidebar-section h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.event-item, .activity-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.event-item:last-child, .activity-item:last-child {
+    border-bottom: none;
+}
+
+.event-item .fw-bold {
+    font-size: 0.95rem;
+}
+
+.event-time, .activity-time {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.btn-light {
+    background: #fff;
+    color: #1e3c72;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: #1e3c72;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    
+    .sidebar .sidebar-header h3 {
+        display: none;
+    }
+    
+    .sidebar .sidebar-header strong {
+        display: block;
+        font-size: 1.5rem;
+    }
+    
+    .list-unstyled.components li a span {
+        display: none;
+    }
+    
+    .list-unstyled.components li a i {
+        margin-right: 0;
+        width: auto;
+    }
+    
+    .sidebar-user {
+        display: none;
+    }
+    
+    #content {
+        margin-left: 70px;
+    }
+    
+    .hero-banner h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner p {
+        font-size: 1rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        height: 200px;
+    }
+}

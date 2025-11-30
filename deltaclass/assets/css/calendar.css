@@ -1,0 +1,85 @@
+/* Weekly Calendar Styles */
+.weekly-calendar {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.weekly-calendar th {
+    background-color: #1e3c72;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.weekly-calendar td {
+    height: 120px;
+    vertical-align: top;
+    border: 1px solid #e9ecef;
+    padding: 8px;
+    background-color: #fff;
+    position: relative;
+}
+
+.weekly-calendar td.other-month {
+    background-color: #f8f9fa;
+    color: #adb5bd;
+}
+
+.weekly-calendar .day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.weekly-calendar .event {
+    background-color: rgba(30, 60, 114, 0.1);
+    border-left: 3px solid #1e3c72;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.weekly-calendar .event:hover {
+    background-color: rgba(30, 60, 114, 0.2);
+}
+
+.weekly-calendar .today {
+    background-color: rgba(30, 60, 114, 0.05) !important;
+    border: 1px solid #1e3c72;
+}
+
+.weekly-calendar .today .day-number {
+    background-color: #1e3c72;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-slot {
+    height: 30px;
+    border-bottom: 1px dashed #e9ecef;
+    position: relative;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+}
+
+.time-indicator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1e3c72;
+    z-index: 10;
+}
